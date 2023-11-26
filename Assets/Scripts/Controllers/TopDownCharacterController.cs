@@ -11,7 +11,7 @@ public class TopDownCharacterController : MonoBehaviour
 
     public void CallMoveEvent(Vector2 direction)
     {
-        OnLookEvent?.Invoke(direction); //?. : OnLookEvent이 Null이 아닐 때만 동작
+        OnMoveEvent?.Invoke(direction); //?. : OnLookEvent이 Null이 아닐 때만 동작
     }
 
     public void CallLookEvent(Vector2 direction)

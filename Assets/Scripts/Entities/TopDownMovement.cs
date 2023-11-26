@@ -7,12 +7,12 @@ public class TopDownMovement : MonoBehaviour
     private TopDownCharacterController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
-    private Rigidbody _rigidbody;
+    private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>(); // ﻿GetComponent : Inspector 안의 Compenent를 가져온다
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
