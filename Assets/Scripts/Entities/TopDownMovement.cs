@@ -17,20 +17,20 @@ public class TopDownMovement : MonoBehaviour
 
     private void Start()
     {
-        _controller.OnMoveEvent += Move; // controller
+        _controller.OnMoveEvent += Move; // Move 구독
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // 물리처리 이후에 이동처리 메서드 호출
     {
         ApplyMovment(_movementDirection);
     }
 
     private void Move(Vector2 direction)
     {
-        _movementDirection = direction;
+        _movementDirection = direction; // 키보드 입력값 설정
     }
 
-    private void ApplyMovment(Vector2 direction)
+    private void ApplyMovment(Vector2 direction) // 이동처리
     {
         direction = direction * 5; // 5라는 속도로 이동
 
