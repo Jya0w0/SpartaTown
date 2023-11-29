@@ -30,7 +30,7 @@ public class TopDownAimRotation : MonoBehaviour
     private void RotateArm(Vector2 direction)
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Debug.Log(rotZ);
+        // Debug.Log(rotZ);
 
         armRenderer.flipY = Mathf.Abs(rotZ) > 90f; // y축을 기준으로 뒤집는 코드
         characterRenderer.flipX = armRenderer.flipY; // 캐릭터를 기준으로 무기가 90도를 넘어가게 되면 뒤집는다
